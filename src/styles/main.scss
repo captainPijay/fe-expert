@@ -16,8 +16,7 @@ body {
   font-family: "Mooli", sans-serif;
   margin: 0;
   background-color: $body-background-color;
-  overflow-x: hidden;
-  width: 100vw;
+  align-items: center;
 }
 .skip-link:focus {
   top: 0;
@@ -246,14 +245,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     right: 0;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     transition: all 1.2s ease-in-out;
     z-index: -1;
     opacity: 0;
   }
   .navbar ul.slide{
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
   #hamburger:hover{
     transform: rotate(360deg);
@@ -281,14 +280,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     right: 0;
-    transform: translateX(100%);
-    transition: all 1.2s ease-in-out;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
     z-index: -1;
     opacity: 0;
   }
   .navbar ul.slide{
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
   #hamburger:hover{
     transform: rotate(360deg);
