@@ -69,7 +69,7 @@ const createFoodDetail = (restaurant) => {
         </form>
       </div>
         <div class="card">
-            <h1 style="text-align:center; margin-bottom:0.5rem;">${restaurant.name}</h1>
+            <h1 style="text-align:center; margin-bottom:0.5rem;" class="name">${restaurant.name}</h1>
             <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="${restaurant.name}">
             <p><strong>Alamat</strong>: <span>${restaurant.address}, <strong>${restaurant.city}</strong></span></p>
             <p><strong>Kategori</strong>: <span>${categories}</span></p>
@@ -99,7 +99,7 @@ const createLikeButtonTemplate = () => `
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this restaurant" id="likeButton" class="like">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like fa">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

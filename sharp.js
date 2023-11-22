@@ -2,6 +2,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
+//yang error di email tentang not supported error type image itu solve nya adalah konfigurasi file dan path dari image nya
 const target = path.resolve(__dirname, 'src/public/images');
 const destination = path.resolve(__dirname, 'dist/images');
 

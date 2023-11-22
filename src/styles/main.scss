@@ -17,6 +17,10 @@ body {
   margin: 0;
   background-color: $body-background-color;
   overflow-x: hidden;
+  width: 100vw;
+}
+.skip-link:focus {
+  top: 0;
 }
 .skip-link {
   position: absolute;

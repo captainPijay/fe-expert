@@ -29,3 +29,25 @@ Scenario('liking one Restaurant', async ({ I }) => {
 
   assert.strictEqual(firstMovieTitle, likedMovieTitle);
 });
+Scenario('Unliking a Restaurant', async ({ I }) => {
+  I.amOnPage('/');
+
+  I.seeElement('.name');
+  const firstMovie = locate('.name').first();
+  const firstMovieTitle = await I.grabTextFrom(firstMovie);
+  I.click(firstMovie);
+  I.seeElement('.fa');
+  I.click('.fa');
+
+  I.amOnPage('/#/favorite');
+  I.seeElement('.title_restaurant');
+  const likedMovieTitle = await I.grabTextFrom('.title_restaurant');
+  assert.strictEqual(firstMovieTitle, likedMovieTitle);
+
+  I.seeElement('.name');
+  I.click('.name');
+  I.seeElement('.fa');
+  I.click('.fa');
+  I.amOnPage('/#/favorite');
+  I.see('Tidak Ada Restaurant Yang Disukai', '.kosong');
+});

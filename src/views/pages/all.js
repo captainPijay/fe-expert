@@ -14,7 +14,7 @@ const All = {
       const card = document.createElement('div');
       card.classList.add('card');
       card.innerHTML = `
-        <img src="${CONFIG.BASE_IMAGE_URL}${res.pictureId}" alt="Gambar Restoran Bu Soraya">
+        <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL}${res.pictureId}" alt="Gambar Restoran Bu Soraya">
         <div class="card-content">
           <div class="rating">${res.rating}</div>
           <h2 class="name"><a href="#/detail/${res.id}" id="detail">${res.name}</a></h2>
